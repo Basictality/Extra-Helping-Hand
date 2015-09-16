@@ -1,34 +1,59 @@
-r65 = game.Players.LocalPlayer.Character
+local screen = Instance.new("ScreenGui")
+screen.Name = "Admin"
+screen.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
 
-back=Instance.new("Part",r65)
-back.Color = Color3.new(0,0,0)
-back.Material = "DiamondPlate"
-back.FormFactor = "Custom"
-back.Size = Vector3.new(2,2,0)
+local z = Instance.new("TextLabel")
+z.Parent = screen
+z.Name = "xd"
+z.Text = "Welcome,"..game.Players.LocalPlayer.Name.."!"
+z.Size = UDim2.new(0, 550,0, 400)
+z.FontSize = Enum.FontSize.Size24
+z.Position = UDim2.new(0, 100,0, 0)
+z.BackgroundTransparency = 0.5
+z.BackgroundColor3 = Color3.new(0,0,0)
+z.TextColor3 = Color3.new(255,255,255)
+z:TweenPosition(UDim2.new(0, 400,0, 200),"In",style,interval,false)
+wait(2)
+z:TweenPosition(UDim2.new(0, 0,0, -10000),"In",style,interval,false)
+wait(1)
+z:remove()
 
-backw = Instance.new("Weld",back)
-backw.Part0=r65.Torso
-backw.Part1=back
-backw.C0=CFrame.new(0,0,0.5)
+local z = Instance.new("TextLabel")
+z.Parent = screen
+z.Name = "LOL"
+z.Text = "Unity"
+z.Size = UDim2.new(0, 350,0, 70)
+z.FontSize = Enum.FontSize.Size24
+z.Position = UDim2.new(0, 100,0, 0)
+z.BackgroundTransparency = 0.5
+z.BackgroundColor3 = Color3.new(0,0,0)
+z.TextColor3 = Color3.new(255,255,255)
 
-back1=Instance.new("Part",back)
-back1.Color = Color3.new(0,0,0)
-back1.Material = "DiamondPlate"
-back1.FormFactor = "Custom"
-back1.Size = Vector3.new(1,1,1)
 
-backw = Instance.new("Weld",back1)
-backw.Part0=r65.Torso
-backw.Part1=back1
-backw.C0=CFrame.new(1.5,0.5,1)
 
-back2=Instance.new("Part",back)
-back2.Color = Color3.new(0,0,0)
-back2.Material = "DiamondPlate"
-back2.FormFactor = "Custom"
-back2.Size = Vector3.new(1,1,1)
+local x = Instance.new("ImageLabel")
+x.Parent = screen
+x.Name = "Notify"
+x.Image = "rbxassetid://214389321"
+x.Size = UDim2.new(0, 100,0, 70)
 
-backw1 = Instance.new("Weld",back2)
-backw1.Part0=r65.Torso
-backw1.Part1=back2
-backw1.C0=CFrame.new(-1.5,0.5,1)
+
+
+local sc = Instance.new("ScrollingFrame")
+sc.Parent = screen
+sc.Name = "SC"
+sc.Size = UDim2.new(0, 200,0, 400)
+sc.Position = UDim2.new(0, 1,0, 70)
+sc.BackgroundColor3 = Color3.new(0,0,0)
+sc.BackgroundTransparency = 0.5
+wait()
+local chattext = Instance.new("TextBox")
+chattext.Parent = screen
+chattext.Name = "xd"
+chattext.Text = "To Chat, Click this bar, or press /"
+chattext.Size = UDim2.new(0, 400,0, 50)
+chattext.FontSize = Enum.FontSize.Size18
+chattext.Position = UDim2.new(0, 950,0, 500)
+chattext.BackgroundTransparency = 0.5
+chattext.BackgroundColor3 = Color3.new(0,0,0)
+chattext.TextColor3 = Color3.new(1,0,0)
